@@ -9,20 +9,302 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol></svg></div>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-check-mark" viewBox="0 0 16 16"><g fill="none">
+  <path d="M7.24255 13.4204C6.51714 14.1458 5.3401 14.1458 4.61504 13.4204L0.544058 9.34931C-0.181353 8.62423 -0.181353 7.44716 0.544058 6.72209C1.26912 5.99666 2.44616 5.99666 3.17157 6.72209L5.59708 9.1473C5.78018 9.33005 6.07742 9.33005 6.26087 9.1473L12.8284 2.57959C13.5535 1.85417 14.7305 1.85417 15.4559 2.57959C15.8043 2.92795 16 3.4006 16 3.8932C16 4.38581 15.8043 4.85845 15.4559 5.20681L7.24255 13.4204Z" fill="currentColor"/>
+</g></symbol><symbol id="icon-clock" viewBox="0 0 16 16"><g fill="none">
+  <path d="M8 0C3.5888 0 0 3.5888 0 8C0 12.4112 3.5888 16 8 16C12.4112 16 16 12.4112 16 8C16 3.5888 12.4112 0 8 0ZM8 14.2977C4.52746 14.2977 1.7021 11.4727 1.7021 8C1.7021 4.5273 4.52746 1.70226 8 1.70226C11.4725 1.70226 14.2979 4.5273 14.2979 8C14.2979 11.4727 11.4725 14.2977 8 14.2977Z" fill="currentColor"/>
+  <path d="M12.1693 7.75296H8.57407V3.43019C8.57407 3.06642 8.27913 2.77148 7.91536 2.77148C7.55159 2.77148 7.25665 3.06642 7.25665 3.43019V8.41167C7.25665 8.77544 7.55159 9.07037 7.91536 9.07037H12.1693C12.5331 9.07037 12.828 8.77544 12.828 8.41167C12.828 8.04789 12.5331 7.75296 12.1693 7.75296Z" fill="currentColor"/>
+</g></symbol></svg>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="container header__container"><a class="header__logo" href="main.html"><img class="header__logo-img" src="img/svg/logo.svg" width="130" height="60" alt="На главную"></a><a class="header__link" href="main.html">К списку страниц</a></div>
       </header>
       <main>
-        <div class="intro">
+        <section class="offers">
           <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/undefined.undefined" alt="">
-            </p>
+            <ul class="offers__list">
+              <li class="offers__item">
+                <article class="offer-card">
+                  <div class="offer-card__cover">
+                    <div class="offer-card__badge">Новинка</div><img class="offer-card__cover-img" src="img/content/offer-01.jpg" srcset="img/content/offer-01@2x.jpg" width="473" height="369" alt="Прекрасный вид">
+                  </div>
+                  <div class="offer-card__content">
+                    <div class="offer-card__title"><strong>Акция</strong> - Обзорная экскурсия по рекам и каналам  с остановками Hop on Hop Off 2019</div>
+                    <div class="offer-card__duration">
+                      <svg class="offer-card__duration-icon" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                      </svg><span>2 часа</span>
+                    </div>
+                    <ul class="offer-card__features">
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Билет на целый день</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Неограниченное число катаний</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>6 остановок у главных достопримечательностей</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg>
+                        <div class="offer-card__departures"><span class="offer-card__departures-title">Ближайший рейс сегодня</span>
+                          <ul class="offer-card__departure-list">
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="offer-card__footer">
+                      <div class="offer-card__price-wrapper">
+                        <p class="offer-card__price">900 ₽</p>
+                        <p class="offer-card__hot-price">1200 ₽ на причале</p>
+                      </div>
+                      <a class="btn offer-card__details-btn" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="offers__item">
+                <article class="offer-card">
+                  <div class="offer-card__cover">
+                    <div class="offer-card__badge" style="background-color:#ffd83b;color:#3e3e3e;">Новинка</div><img class="offer-card__cover-img" src="img/content/offer-02.jpg" srcset="img/content/offer-02@2x.jpg" width="472" height="369" alt="Прекрасный вид">
+                  </div>
+                  <div class="offer-card__content">
+                    <div class="offer-card__title"><strong>Акция</strong> - Обзорная экскурсия по рекам и каналам  с остановками Hop on Hop Off 2019</div>
+                    <div class="offer-card__duration">
+                      <svg class="offer-card__duration-icon" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                      </svg><span>2 часа</span>
+                    </div>
+                    <ul class="offer-card__features">
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Билет на целый день</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Неограниченное число катаний</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>6 остановок у главных достопримечательностей</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg>
+                        <div class="offer-card__departures"><span class="offer-card__departures-title">Ближайший рейс сегодня</span>
+                          <ul class="offer-card__departure-list">
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="offer-card__footer">
+                      <div class="offer-card__price-wrapper">
+                        <p class="offer-card__price">900 ₽</p>
+                      </div>
+                      <a class="btn offer-card__details-btn" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="offers__item">
+                <article class="offer-card">
+                  <div class="offer-card__cover"><img class="offer-card__cover-img" src="img/content/offer-03.jpg" srcset="img/content/offer-03@2x.jpg" width="467" height="368" alt="Прекрасный вид">
+                  </div>
+                  <div class="offer-card__content">
+                    <div class="offer-card__title"><strong>Акция</strong> - Обзорная экскурсия по рекам и каналам  с остановками Hop on Hop Off 2019</div>
+                    <div class="offer-card__duration">
+                      <svg class="offer-card__duration-icon" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                      </svg><span>2 часа</span>
+                    </div>
+                    <ul class="offer-card__features">
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Билет на целый день</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Неограниченное число катаний</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>6 остановок у главных достопримечательностей</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg>
+                        <div class="offer-card__departures"><span class="offer-card__departures-title">Ближайший рейс сегодня</span>
+                          <ul class="offer-card__departure-list">
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="offer-card__footer">
+                      <div class="offer-card__price-wrapper">
+                        <p class="offer-card__price">900 ₽</p>
+                        <p class="offer-card__hot-price">1200 ₽ на причале</p>
+                      </div>
+                      <a class="btn offer-card__details-btn" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="offers__item">
+                <article class="offer-card">
+                  <div class="offer-card__cover">
+                    <div class="offer-card__badge" style="background-color:#fed74b;color:#323232;">Новинка</div><img class="offer-card__cover-img" src="img/content/offer-04.jpg" srcset="img/content/offer-04@2x.jpg" width="341" height="284" alt="Прекрасный вид">
+                  </div>
+                  <div class="offer-card__content">
+                    <div class="offer-card__title"><strong>Акция</strong> - Обзорная экскурсия по рекам и каналам  с остановками Hop on Hop Off 2019</div>
+                    <div class="offer-card__duration">
+                      <svg class="offer-card__duration-icon" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                      </svg><span>2 часа</span>
+                    </div>
+                    <ul class="offer-card__features">
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Билет на целый день</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Неограниченное число катаний</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>6 остановок у главных достопримечательностей</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg>
+                        <div class="offer-card__departures"><span class="offer-card__departures-title">Ближайший рейс сегодня</span>
+                          <ul class="offer-card__departure-list">
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="offer-card__footer">
+                      <div class="offer-card__price-wrapper">
+                        <p class="offer-card__price">900 ₽</p>
+                        <p class="offer-card__hot-price">1200 ₽ на причале</p>
+                      </div>
+                      <a class="btn offer-card__details-btn" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="offers__item">
+                <article class="offer-card offer-card--restyled">
+                  <div class="offer-card__cover">
+                    <div class="offer-card__badge">Новинка</div><img class="offer-card__cover-img" src="img/content/offer-04.jpg" srcset="img/content/offer-04@2x.jpg" width="341" height="284" alt="Прекрасный вид">
+                  </div>
+                  <div class="offer-card__content">
+                    <div class="offer-card__title"><strong>Акция</strong> - Обзорная экскурсия по рекам и каналам  с остановками Hop on Hop Off 2019</div>
+                    <div class="offer-card__duration">
+                      <svg class="offer-card__duration-icon" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-clock"></use>
+                      </svg><span>2 часа</span>
+                    </div>
+                    <ul class="offer-card__features">
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Билет на целый день</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>Неограниченное число катаний</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg><span>6 остановок у главных достопримечательностей</span>
+                      </li>
+                      <li class="offer-card__feature">
+                        <svg class="offer-card__feature-icon" width="16" height="16" aria-hidden="true">
+                          <use xlink:href="#icon-check-mark"></use>
+                        </svg>
+                        <div class="offer-card__departures"><span class="offer-card__departures-title">Ближайший рейс сегодня</span>
+                          <ul class="offer-card__departure-list">
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                            <li class="offer-card__departure-item"><a class="offer-card__departure-link" href="#">
+                                <time datetime="T12:00:00">12:00</time></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="offer-card__footer">
+                      <div class="offer-card__price-wrapper">
+                        <p class="offer-card__price">2900 ₽</p>
+                        <p class="offer-card__hot-price">4200 ₽ на нашем шикарном причале</p>
+                      </div>
+                      <a class="btn offer-card__details-btn btn--restyled" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container"></div>

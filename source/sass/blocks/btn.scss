@@ -1,18 +1,19 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  justify-content: center;
+  min-width: 140px;
+  padding: 11px 23px;
 
-  color: $color-default-white;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-eclipse;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-energy-yellow;
+  border: 1px solid $color-buddha-gold;
+  border-radius: 20px;
   cursor: pointer;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
+  transition: background-color $trans-default;
 
   &:disabled {
     opacity: 0.5;
@@ -20,7 +21,31 @@
     pointer-events: none;
   }
 
+  &--restyled {
+    border-radius: 10px;
+  }
+
   @include hover-focus {
-    opacity: 0.8;
+    color: inherit;
+    background-color: $color-buddha-gold;
+  }
+
+  @include vp-375 {
+    min-width: 165px;
+
+    &--restyled {
+      min-width: 190px;
+    }
+  }
+
+  @include vp-1024 {
+    min-width: 190px;
+    padding: 15px 31px;
+
+    font-size: 18px;
+
+    &--restyled {
+      min-width: 230px;
+    }
   }
 }

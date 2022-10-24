@@ -1,0 +1,36 @@
+mixin offer-card({ cover, badge, duration, title, features, nearestDepartures, price, hotPrice, mods= [] })
+
+  article.offer-card(class= mods.map((mod) => `offer-card--${mod}`))
+    .offer-card__cover
+      if badge
+        -
+          let style = {}
+          badge.bgc ? style = { ...style, "background-color": badge.bgc } : style
+          badge.txt ? style = { ...style, color: badge.txt } : style
+        .offer-card__badge(style= style)= badge.content
+      +img(cover).offer-card__cover-img
+    .offer-card__content
+      .offer-card__title!= title
+      .offer-card__duration
+        +icon("icon-clock", 16, 16).offer-card__duration-icon
+        span= duration
+      ul.offer-card__features
+        each feature in features
+          li.offer-card__feature
+            +icon("icon-check-mark", 16, 16).offer-card__feature-icon
+            span= feature
+        li.offer-card__feature
+          +icon("icon-check-mark", 16, 16).offer-card__feature-icon
+          .offer-card__departures
+            span.offer-card__departures-title Ближайший рейс сегодня
+            ul.offer-card__departure-list
+              each departure in nearestDepartures
+                li.offer-card__departure-item
+                  a(href="#").offer-card__departure-link
+                    time(datetime= departure.robot)= departure.human
+      .offer-card__footer
+        .offer-card__price-wrapper
+          p.offer-card__price= price
+          if hotPrice
+            p.offer-card__hot-price= hotPrice
+        +btn({ href: "#", text: "Подробнее" }).offer-card__details-btn(class= mods.map((mod) => `btn--${mod}`))

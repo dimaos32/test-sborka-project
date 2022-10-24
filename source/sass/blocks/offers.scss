@@ -1,0 +1,23 @@
+.offers__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 16px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @include vp-375 {
+    gap: 30px 16px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: 1fr;
+    gap: 60px 32px;
+  }
+}

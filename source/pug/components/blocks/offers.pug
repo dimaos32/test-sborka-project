@@ -1,0 +1,8 @@
+mixin offers(data = [])
+
+  section.offers
+    .container
+      ul.offers__list
+        each offer in data
+          li.offers__item
+            +offer-card(offer)
