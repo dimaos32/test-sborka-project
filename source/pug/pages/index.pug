@@ -1,18 +1,67 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
-  - const wrapperMods = ""
-  - const hasHeader = true
-  - const headerMods = ""
-  - const hasFooter = true
-  - const footerMods = ""
-  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const title = "Список страниц"
 
 block main
-  main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+  style.
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
 
-block modals
+    h1 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    a {
+      color: rgb(10, 10, 175);
+    }
+
+    li {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 7px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      ol li {
+        margin-bottom: 15px;
+      }
+    }
+
+  -
+    const pages = [
+      {
+        name: "Верстка блока",
+        src: "markup.html"
+      },
+    ]
+
+  main
+    .container
+      img(src="img/svg/logo.svg" width="130" height="60" alt="Логотип проекта")
+      h1 Список страниц
+      ol
+        each page in pages
+          li
+            a(href= page.src)= `${page.name} — ${page.src}`

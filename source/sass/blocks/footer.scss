@@ -1,5 +1,38 @@
 .footer {
-  padding: 40px 0;
+  padding: 20px 0;
 
-  background-color: $color-neon-blue;
+  background-color: $color-energy-yellow;
+}
+
+.header__container {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @include vp-375 {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  @include vp-768 {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+}
+
+.header__logo-img {
+  width: 100px;
+  height: auto;
+
+  @include vp-768 {
+    width: 130px;
+  }
 }

@@ -1,2 +1,12 @@
-mixin img(path, image, format, width, height, altText)
-  img(src="img/" + path + "/" + image + "." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText)
+mixin img(data, noSrcset = false)
+
+  - data.path = data.type === "svg" && !data.path ? "svg" : data.path
+  - const { path = "content", name, type, width, height, alt = "" } = data
+
+  if type === "svg"
+    img(src=`img/${path}/${name}.${type}`, width= width, height= height, alt= alt)&attributes(attributes)
+  else
+    img(
+      src=`img/${path}/${name}.${type}`,
+      srcset= noSrcset ? false : `img/${path}/${name}@2x.${type}`, width= width, height= height, alt= alt
+    )&attributes(attributes)

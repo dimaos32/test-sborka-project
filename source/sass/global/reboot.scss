@@ -14,9 +14,9 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $ff-opensans;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -25,18 +25,29 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @include vp-768 {
+    font-size: 18px;
+  }
 }
 
 body {
   width: 100%;
+  min-width: 320px;
   height: 100%;
 
   background-color: $color-default-white;
 }
 
 a {
-  color: $color-default-black;
+  color: inherit;
   text-decoration: none;
+
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-medium-slate-blue;
+  }
 }
 
 img,
