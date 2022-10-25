@@ -1,4 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {initDepartureOptions} from './modules/departure-options';
 
 // ---------------------------------
 
@@ -8,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initDepartureOptions();
 
   // Modules
   // ---------------------------------
