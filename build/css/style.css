@@ -418,7 +418,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.4285714286;
   font-family: "Open Sans", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
@@ -1001,6 +1001,40 @@ button,
   margin-left: 9px;
 }
 
+.schedule__title {
+  margin: 0;
+}
+
+.schedule__title:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.schedule__block label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.schedule__block select,
+.schedule__block input {
+  display: block;
+  min-width: 200px;
+  margin-bottom: 5px;
+  font: inherit;
+}
+
+.schedule__block .warning {
+  color: #fe0000;
+}
+
+.schedule__block:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.schedule__block.is-hide {
+  display: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1104,6 +1138,7 @@ button,
 @media (min-width: 1024px) {
   html {
     font-size: 18px;
+    line-height: 1.1111111111;
   }
 
   section {

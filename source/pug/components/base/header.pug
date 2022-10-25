@@ -6,11 +6,15 @@ mixin header(headerMods, currentUrl)
       type: "svg",
       width: 130,
       height: 60,
-      alt: "На главную",
+      alt: "Sborka Project logo",
     }
 
   header.header(class=headerMods)
     .container.header__container
-      a.header__logo(href="main.html")
+      a.header__logo(
+        href="https://sborkaproject.ru/",
+        target="_blank",
+        rel="nofollow noopener noreferrer"
+      )
         +img(logo).header__logo-img
-      a.header__link(href="main.html") К списку страниц
+      a.header__link(href="index.html") К списку страниц

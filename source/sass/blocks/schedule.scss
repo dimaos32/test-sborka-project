@@ -1,0 +1,36 @@
+.schedule__title {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.schedule__block{
+  label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-weight: 600;
+  }
+
+  select,
+  input {
+    display: block;
+    min-width: 200px;
+    margin-bottom: 5px;
+    font: inherit;
+  }
+
+  .warning {
+    color:#fe0000;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &.is-hide {
+    display: none;
+  }
+}

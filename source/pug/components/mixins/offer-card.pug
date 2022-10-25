@@ -10,7 +10,7 @@ mixin offer-card({ cover, badge, duration, title, features, nearestDepartures, p
         .offer-card__badge(style= style)= badge.content
       +img(cover).offer-card__cover-img
     .offer-card__content
-      .offer-card__title!= title
+      h2.offer-card__title!= title
       .offer-card__duration
         +icon("icon-clock", 16, 16).offer-card__duration-icon
         span= duration

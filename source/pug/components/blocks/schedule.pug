@@ -1,0 +1,28 @@
+mixin schedule(data = [])
+
+  section.schedule
+    .container
+      h1.schedule__title Планирование путешествия
+
+      .schedule__block
+        label(for="route") Выберите направление
+        select(name="route", id="route", data-direction-select)
+          option(value="direct") Туда
+          option(value="return") Обратно
+          option(value="both-sides") Туда и обратно
+
+      .schedule__block.is-hide(data-direct-departure)
+        label(for="departure") Выберите время отправления
+        select(name="departure", id="departure", data-direct-departure-select)
+
+      .schedule__block.is-hide(data-return-departure)
+        label(for="return-departure") Выберите время обратного отправления
+        select(name="return-departure", id="return-departure", data-return-departure-select)
+
+      .schedule__block(data-calculate)
+        label(for="num") Количество билетов #[br]#[em (не больше 40 билетов в одни руки)]
+        input(type="number" min="1", max="40", id="num", data-tickets-qty)
+        button(type="button", data-calculate-btn) Посчитать
+
+      .schedule__block.is-hide(data-message)
+
