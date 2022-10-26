@@ -29,7 +29,7 @@ mixin offer-card({ cover, badge, duration, title, features, nearestDepartures, p
                   a(href="#").offer-card__departure-link
                     time(datetime= departure.robot)= departure.human
               li.offer-card__departure-item.is-hide(data-departure-show-more)
-                a(href="#").offer-card__departure-link(data-departure-show-more-link) ещё...
+                a.offer-card__departure-link(href="#", data-departure-show-more-link) ещё...
                 ul.offer-card__departure-hidden-list
       .offer-card__footer
         .offer-card__price-wrapper
